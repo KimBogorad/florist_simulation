@@ -1,8 +1,10 @@
+#include <iostream>
+
 #include "Person.h"
 #include "Wholesaler.h"
+
 #include "Grower.h"
 #include "FlowersBouquet.h"
-#include <iostream>
 
 // Constructor
 Wholesaler::Wholesaler(std::string name, Grower* grower) : Person(name), grower(grower) {}
