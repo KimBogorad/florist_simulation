@@ -1,4 +1,4 @@
-#include <string>
+#include <iostream>
 
 class FlowersBouquet {
     private:
@@ -7,7 +7,7 @@ class FlowersBouquet {
 
     public:
         // Constructor
-        FlowersBouquet();
+        FlowersBouquet(std::vector<std::string> flowers, bool is_arranged);
 
         //Class Methods
         void arrange();

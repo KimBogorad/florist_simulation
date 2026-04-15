@@ -1,6 +1,6 @@
+#include <iostream>
+
 #include "Person.h"
-#include <string>
-#include <vector>
 
 class Wholesaler;
 class FlowerArranger;
