@@ -12,7 +12,9 @@ Grower::Grower(std::string name, Gardener* gardener) : Person(name), gardener(ga
 // Class Methods
 FlowersBouquet* Grower::prepareOrder(std::vector<std::string> flowers) {
     std::cout << "Grower " << getName() << " forwards the request to Gardener " << gardener->getName() << "." << std::endl;
-    return gardener->prepareBouquet(flowers);
+    FlowersBouquet* bouquet = gardener->prepareBouquet(flowers);
+    std::cout << "Gardener " << gardener->getName() << " returns flowers to Grower " << this->getName() << "." << std::endl;
+    return bouquet;
 }
 
 // Getters and Setters

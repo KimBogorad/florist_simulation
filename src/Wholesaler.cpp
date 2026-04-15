@@ -12,7 +12,9 @@ Wholesaler::Wholesaler(std::string name, Grower* grower) : Person(name), grower(
 // Class Methods
 FlowersBouquet* Wholesaler::acceptOrder(std::vector<std::string> flowers) {
     std::cout << "Wholesaler " << getName() << " forwards request to Grower " << grower->getName() << "." << std::endl;
-    return grower->prepareOrder(flowers);
+    FlowersBouquet* bouquet = grower->prepareOrder(flowers);
+    std::cout << "Grower " << grower->getName() << " returns flowers to Wholesaler " << this->getName() << "." << std::endl;
+    return bouquet;
 }
 
 // Getters and Setters
