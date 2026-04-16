@@ -1,49 +1,42 @@
-🌸 Flower Delivery Simulation
-A C++ object-oriented application that simulates a complex supply chain for ordering and delivering customized flower bouquets. This project demonstrates core OOP principles like inheritance, encapsulation, and the Chain of Responsibility design pattern.
+# 🌸 Flower Delivery Simulation
 
-🏗️ The Pipeline Architecture
+A C++ object-oriented application that simulates a complex supply chain for ordering and delivering customized flower bouquets. This project demonstrates core OOP principles like inheritance, encapsulation, and the **Chain of Responsibility** design pattern.
+
+## 🏗️ The Pipeline Architecture
 The project simulates a multi-step request-and-return pipeline where each agent has a specific role in the process:
 
-Customer (Person): Initiates the order with a specific list of flowers.
+1. **Customer (`Person`)**: Initiates the order with a specific list of flowers.
+2. **`Florist`**: The main orchestrator who manages the business logic.
+3. **`Wholesaler`**: Forwards bulk requests to specialized growers.
+4. **`Grower`**: Manages the cultivation process with a Gardener.
+5. **`Gardener`**: Creates the `FlowersBouquet` object (The "source" of the pipeline).
+6. **`FlowerArranger`**: Formats and styles the raw flowers into an arrangement.
+7. **`DeliveryPerson`**: Handles the final hand-off to the recipient.
 
-Florist: The main orchestrator who manages the business logic.
+## 🛠️ Key Features
+* **Dynamic Memory Management**: Utilizes heap allocation (`new`) for actors and products, with a centralized cleanup strategy to prevent memory leaks.
+* **Encapsulation**: Strict use of access modifiers and public interfaces (`getName()`, `acceptOrder()`) to protect object state.
+* **String Serialization**: Custom `toString()` implementation in `FlowersBouquet` for pretty-printing the final product.
+* **Header Guards**: Implementation of `#ifndef` guards across all classes to prevent circular dependencies.
 
-Wholesaler: Forwards bulk requests to specialized growers.
+## 🚀 Getting Started
 
-Grower: Manages the cultivation process with a Gardener.
+### Project Structure
+* `/src`: Contains all `.cpp` implementation files.
+* `/include`: Contains all `.h` header files.
 
-Gardener: Creates the FlowersBouquet object (The "source" of the pipeline).
-
-FlowerArranger: Formats and styles the raw flowers into an arrangement.
-
-DeliveryPerson: Handles the final hand-off to the recipient.
-
-🛠️ Key Features
-Dynamic Memory Management: Utilizes heap allocation (new) for actors and products, with a centralized cleanup strategy to prevent memory leaks.
-
-Encapsulation: Strict use of access modifiers and public interfaces (getName(), acceptOrder()) to protect object state.
-
-String Serialization: Custom toString() implementation in FlowersBouquet for pretty-printing the final product.
-
-Header Guards: Implementation of #ifndef guards across all classes to prevent circular dependencies.
-
-🚀 Getting Started
-Project Structure
-/src: Contains all .cpp implementation files.
-
-/include: Contains all .h header files.
-
-Compilation
-To compile the project using g++, navigate to the src directory and run:
-
-Bash
+### Compilation
+To compile the project using `g++`, navigate to the `src` directory and run:
+```bash
 g++ -std=c++11 -I ../include *.cpp -o flower_app
-Execution
-Bash
+```
+
+### Execution
+```bash
 ./flower_app
-📜 Future Roadmap
-Pointless Accessor Removal: Refactor classes to remove unused getters/setters.
+```
 
-Centralized Logger: Move std::cout logic into a Person::logAction helper for cleaner code.
+## 📜 Future Roadmap
+* **Pointless Accessor Removal:** Refactor classes to remove unused getters/setters.
 
-Smart Pointers: Migrate to std::unique_ptr for modern C++ memory safety.
+* **Centralized Logger:** Move std::cout logic into a Person::logAction helper for cleaner code.
