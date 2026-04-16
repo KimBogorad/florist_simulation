@@ -2,7 +2,7 @@
 
 class FlowersBouquet {
     private:
-        std::string bouquet;
+        std::vector<std::string> bouquet;
         bool is_arranged;
 
     public:
@@ -13,9 +13,12 @@ class FlowersBouquet {
         void arrange();
 
         // Getters and Setters
-        std::string getBouquet() const;
+        std::vector<std::string> getBouquet() const;
         bool getIsArranged() const;
 
         void setBouquet(std::string bouquet);
         void setIsArranged(bool is_arranged);
+
+        // toString method
+        std::string FlowersBouquet::toString() const;
 };

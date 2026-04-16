@@ -15,12 +15,13 @@ Florist::Florist(std::string name, Wholesaler* wholesaler, FlowerArranger* flowe
 
 // Class Methods
 void Florist::acceptOrder(Person* recipient, std::vector<std::string> flowers) {
-    std::cout << "Florist" << getName() << " forwards request to Wholesaler " << wholesaler->getName() << "." << std::endl;
+    std::cout << "Florist " << getName() << " forwards request to Wholesaler " << wholesaler->getName() << "." << std::endl;
     FlowersBouquet* bouquet = wholesaler->acceptOrder(flowers);
-    std::cout << "Wholesaler" << wholesaler->getName() << " returns flowers to Florist " << this->getName() << "."<< std::endl;
-    std::cout << "Florist" << getName() << " request flowers arrangement from Flower Arranger " << flowerArranger->getName() << "."<< std::endl;
+    std::cout << "Wholesaler " << wholesaler->getName() << " returns flowers to Florist " << getName() << "."<< std::endl;
+    std::cout << "Florist " << getName() << " request flowers arrangement from Flower Arranger " << flowerArranger->getName() << "."<< std::endl;
     flowerArranger->arrangeFlowers(bouquet);
-    std::cout << "Florist" << getName() << " forwards flowers to Delivery Person " << deliveryPerson->getName() << "." << std::endl;
+    std::cout << "Flower Arranger " << flowerArranger->getName() << " returns arranged flowers to Florist " << getName() << "." << std::endl;
+    std::cout << "Florist " << getName() << " forwards flowers to Delivery Person " << deliveryPerson->getName() << "." << std::endl;
     deliveryPerson->deliver(recipient, bouquet);
 }
 
