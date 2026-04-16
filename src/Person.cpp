@@ -24,13 +24,15 @@ void Person::acceptFlowers(FlowersBouquet* bouquet) {
     delete bouquet; // the bouquet has lived up its cycle
 }
 
+// Log Actions
+void Person::logAction(std::string myRole, std::string action, std::string targetRole, std::string targetName) {
+    std::cout << myRole << " " << name << " " << action
+     << " " << targetRole << " " << targetName << "." << std::endl;
+}
+
 // Getters and Setters
 std::string Person::getName() const {
     return name;
-}
-
-void Person::setName(std::string name) {
-    this->name = name;
 }
 
         

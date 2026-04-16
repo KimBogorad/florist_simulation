@@ -20,10 +20,5 @@ class Wholesaler: public Person {
 
         // Class Methods
         FlowersBouquet* acceptOrder(std::vector<std::string> flowers);
-
-        //Getters and Setters
-        Grower* getGrower() const;
-
-        void setGrower(Grower* grower);
 };
 #endif

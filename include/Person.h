@@ -10,6 +10,9 @@ class FlowersBouquet;
 class Person {
     private: 
         std::string name;
+
+    protected:
+        void logAction(std::string myRole, std::string action, std::string targetRole, std::string targetName);
     
     public:
         // Constructor
@@ -23,7 +26,5 @@ class Person {
         
         // Getters and Setters
         std::string getName() const;
-
-        void setName(std::string name);
 };
 #endif

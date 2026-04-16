@@ -16,12 +16,3 @@ FlowersBouquet* Grower::prepareOrder(std::vector<std::string> flowers) {
     std::cout << "Gardener " << gardener->getName() << " returns flowers to Grower " << getName() << "." << std::endl;
     return bouquet;
 }
-
-// Getters and Setters
-Gardener* Grower::getGardener() const {
-    return gardener;
-}
-
-void Grower::setGardener(Gardener* gardener) {
-    this->gardener = gardener;
-}

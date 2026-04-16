@@ -15,13 +15,6 @@ class FlowersBouquet {
         //Class Methods
         void arrange();
 
-        // Getters and Setters
-        std::vector<std::string> getBouquet() const;
-        bool getIsArranged() const;
-
-        void setBouquet(std::string bouquet);
-        void setIsArranged(bool is_arranged);
-
         // toString method
         std::string toString() const;
 };

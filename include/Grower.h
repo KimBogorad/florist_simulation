@@ -17,10 +17,5 @@ class Grower: public Person {
 
         // Class Methods
         FlowersBouquet* prepareOrder(std::vector<std::string> flowers);
-
-        // Getters and Setters
-        Gardener* getGardener() const;
-
-        void setGardener(Gardener* gardener);
 };
 #endif

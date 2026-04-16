@@ -16,12 +16,3 @@ FlowersBouquet* Wholesaler::acceptOrder(std::vector<std::string> flowers) {
     std::cout << "Grower " << grower->getName() << " returns flowers to Wholesaler " << getName() << "." << std::endl;
     return bouquet;
 }
-
-// Getters and Setters
-Grower* Wholesaler::getGrower() const {
-    return grower;
-}
-
-void Wholesaler::setGrower(Grower* grower) {
-    this->grower = grower;
-}

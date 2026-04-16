@@ -24,24 +24,3 @@ void Florist::acceptOrder(Person* recipient, std::vector<std::string> flowers) {
     std::cout << "Florist " << getName() << " forwards flowers to Delivery Person " << deliveryPerson->getName() << "." << std::endl;
     deliveryPerson->deliver(recipient, bouquet);
 }
-
-// Getters and Setters
-Wholesaler* Florist::getWholesaler() const {
-    return wholesaler;
-}
-FlowerArranger* Florist::getFlowerArranger() const {
-    return flowerArranger;
-}
-DeliveryPerson* Florist::getDeliveryPerson() const {
-    return deliveryPerson;
-}
-
-void Florist::setWholesaler(Wholesaler* wholesaler) {
-    this->wholesaler = wholesaler;
-}
-void Florist::setFlowerArranger(FlowerArranger* flowerArranger) {
-    this->flowerArranger = flowerArranger;
-}
-void Florist::setDeliveryPerson(DeliveryPerson* deliveryPerson) {
-    this->deliveryPerson = deliveryPerson;
-}
