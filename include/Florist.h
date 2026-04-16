@@ -1,3 +1,6 @@
+#ifndef FLORIST_H  //Guard to prevent multiple inclusions of the same header file 
+#define FLORIST_H  //This happens because of inheritance
+
 #include <iostream>
 
 #include "Person.h"
@@ -30,3 +33,4 @@ class Florist : public Person {
         void setFlowerArranger(FlowerArranger* flowerArranger);
         void setDeliveryPerson(DeliveryPerson* deliveryPerson);
 };
+#endif

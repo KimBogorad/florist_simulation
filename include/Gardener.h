@@ -1,3 +1,6 @@
+#ifndef GARDENER_H  //Guard to prevent multiple inclusions of the same header file 
+#define GARDENER_H  //This happens because of inheritance
+
 #include <iostream>
 
 #include "Person.h"
@@ -12,3 +15,4 @@ class Gardener: public Person {
         // Class Methods
         FlowersBouquet* prepareBouquet(std::vector<std::string> flowers);
 };
+#endif

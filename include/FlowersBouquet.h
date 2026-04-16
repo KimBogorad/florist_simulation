@@ -1,3 +1,6 @@
+#ifndef FLOWERSBOUQUET_H  //Guard to prevent multiple inclusions of the same header file 
+#define FLOWERSBOUQUET_H  //This happens because of inheritance
+
 #include <iostream>
 
 class FlowersBouquet {
@@ -20,5 +23,6 @@ class FlowersBouquet {
         void setIsArranged(bool is_arranged);
 
         // toString method
-        std::string FlowersBouquet::toString() const;
+        std::string toString() const;
 };
+#endif

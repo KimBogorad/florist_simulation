@@ -1,3 +1,6 @@
+#ifndef GROWER_H  //Guard to prevent multiple inclusions of the same header file 
+#define GROWER_H  //This happens because of inheritance
+
 #include <iostream>
 
 #include "Person.h"
@@ -20,3 +23,4 @@ class Grower: public Person {
 
         void setGardener(Gardener* gardener);
 };
+#endif

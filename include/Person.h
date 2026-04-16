@@ -1,3 +1,6 @@
+#ifndef PERSON_H  //Guard to prevent multiple inclusions of the same header file 
+#define PERSON_H  //This happens because of inheritance
+
 #include <iostream>
 #include <vector>
 
@@ -23,3 +26,4 @@ class Person {
 
         void setName(std::string name);
 };
+#endif

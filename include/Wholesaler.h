@@ -1,3 +1,6 @@
+#ifndef WHOLESALER_H  //Guard to prevent multiple inclusions of the same header file 
+#define WHOLESALER_H  //This happens because of inheritance
+
 #include <iostream>
 #include <vector>
 
@@ -23,3 +26,4 @@ class Wholesaler: public Person {
 
         void setGrower(Grower* grower);
 };
+#endif
