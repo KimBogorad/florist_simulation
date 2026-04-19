@@ -28,15 +28,10 @@ The project simulates a multi-step request-and-return pipeline where each agent 
 ### Compilation
 To compile the project using `g++`, navigate to the `src` directory and run:
 ```bash
-g++ -std=c++11 -I ../include *.cpp -o flower_app
+g++ -I./include src/*.cpp -o FloristSim
 ```
 
 ### Execution
 ```bash
-./flower_app
+./FloristSim
 ```
-
-## 📜 Future Roadmap
-* **Pointless Accessor Removal:** Refactor classes to remove unused getters/setters.
-
-* **Centralized Logger:** Move std::cout logic into a Person::logAction helper for cleaner code.
