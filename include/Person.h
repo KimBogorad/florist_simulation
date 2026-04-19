@@ -11,9 +11,6 @@ class Person {
     private: 
         std::string name;
 
-    protected:
-        void logAction(std::string myRole, std::string action, std::string targetRole, std::string targetName);
-    
     public:
         // Constructor
         Person(std::string name);
